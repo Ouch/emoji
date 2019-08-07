@@ -42,208 +42,208 @@ func (e *Emoji) GetString() string {
 }
 
 var (
-	emoji = []Emoji{
-		Emoji{
+	emoji = []*Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😄"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😃"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😀"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😄"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😁"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😆"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😅"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🤣"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🤠"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🙂"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😊"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😇"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🥰"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😍"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🤩"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😘"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😜"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🤪"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😝"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("😎"),
 		},
-		Emoji{
+		&Emoji{
 			Happy,
 			1,
 			[]byte("🥳"),
 		},
-		Emoji{
+		&Emoji{
 			Neutral,
 			0,
 			[]byte("😐"),
 		},
-		Emoji{
+		&Emoji{
 			Neutral,
 			0,
 			[]byte("😑"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("☹️"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😐"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😑"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😬"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😔"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🤒"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🤕"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🤮"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🥴"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😵"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🤯"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🧐"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😕"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("🥺"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😭"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😖"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😞"),
 		},
-		Emoji{
+		&Emoji{
 			Sad,
 			-1,
 			[]byte("😫"),
@@ -252,7 +252,7 @@ var (
 )
 
 // GetEmoji - Get an emoji based on emotion and sentiment score.
-func GetEmoji(emotion Emotion, score int) Emoji {
+func GetEmoji(emotion Emotion, score int) *Emoji {
 	// TODO: add support for sentiment score
 	for _, emoji := range emoji {
 		if emoji.emotion == emotion {
@@ -263,8 +263,8 @@ func GetEmoji(emotion Emotion, score int) Emoji {
 }
 
 // GetRandomEmoji - Get a random emoji based on emotion.
-func GetRandomEmoji(emotion Emotion) Emoji {
-	possible := []Emoji{}
+func GetRandomEmoji(emotion Emotion) *Emoji {
+	possible := []*Emoji{}
 	for _, emoji := range emoji {
 		if emoji.emotion == emotion {
 			possible = append(possible, emoji)
