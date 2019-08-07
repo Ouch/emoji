@@ -1,4 +1,4 @@
-package react
+package emoji
 
 import (
 	"testing"
