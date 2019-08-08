@@ -21,23 +21,23 @@ type Emoji struct {
 	bytes   []byte
 }
 
-// GetEmotion - REturn the emotion of this emoji.
-func (e *Emoji) GetEmotion() Emotion {
+// Emotion - Return the emotion of this emoji.
+func (e *Emoji) Emotion() Emotion {
 	return e.emotion
 }
 
-// GetScore - Return the sentiment score of this emoji.
-func (e *Emoji) GetScore() int {
+// Score - Return the sentiment score of this emoji.
+func (e *Emoji) Score() int {
 	return e.score
 }
 
-// GetBytes - Return the byte representation of this emoji.
-func (e *Emoji) GetBytes() []byte {
+// Bytes - Return the byte representation of this emoji.
+func (e *Emoji) Bytes() []byte {
 	return e.bytes
 }
 
 // GetString - Return a string representation of this emoji.
-func (e *Emoji) GetString() string {
+func (e *Emoji) String() string {
 	return string(e.bytes)
 }
 

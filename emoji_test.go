@@ -6,14 +6,14 @@ import (
 
 func TestGetEmoji(t *testing.T) {
 	emoji := GetEmoji(Sad, 0)
-	if emoji.GetString() != "☹️" {
+	if emoji.String() != "☹️" {
 		t.Fail()
 	}
 }
 
 func TestGetRandomEmoji(t *testing.T) {
 	emoji := GetRandomEmoji(Happy)
-	if emoji.GetEmotion() != "happy" {
+	if emoji.Emotion() != "happy" {
 		t.Fail()
 	}
 }
