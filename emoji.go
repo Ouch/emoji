@@ -161,11 +161,6 @@ var (
 		&Emoji{
 			Sad,
 			-1,
-			[]byte("☹️"),
-		},
-		&Emoji{
-			Sad,
-			-1,
 			[]byte("😐"),
 		},
 		&Emoji{
